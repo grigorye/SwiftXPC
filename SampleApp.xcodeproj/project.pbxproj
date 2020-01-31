@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDDD91F023CF091D00A880AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD91EF23CF091D00A880AE /* AppDelegate.swift */; };
+		DDDD91F423CF091F00A880AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDD91F323CF091F00A880AE /* Assets.xcassets */; };
+		DDDD91FA23CF091F00A880AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDD91F823CF091F00A880AE /* Main.storyboard */; };
+		DDDD920423CF0A3200A880AE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD920323CF0A3200A880AE /* MainView.swift */; };
+		DDDD921523CF0D3600A880AE /* SharedKit in Frameworks */ = {isa = PBXBuildFile; productRef = DDDD921423CF0D3600A880AE /* SharedKit */; };
+		DDDD922023CF120100A880AE /* FinderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD921F23CF120100A880AE /* FinderInterface.swift */; };
+		DDDD922223CF120100A880AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD922123CF120100A880AE /* main.swift */; };
+		DDDD922623CF120100A880AE /* SampleXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = DDDD921B23CF120000A880AE /* SampleXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDDD922B23CF12FF00A880AE /* FinderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD921F23CF120100A880AE /* FinderInterface.swift */; };
+		DDDD922D23CF13DB00A880AE /* SharedKit in Frameworks */ = {isa = PBXBuildFile; productRef = DDDD922C23CF13DB00A880AE /* SharedKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDDD922423CF120100A880AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDDD91E423CF091D00A880AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDDD921A23CF120000A880AE;
+			remoteInfo = SampleXPC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DDDD922A23CF120100A880AE /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				DDDD922623CF120100A880AE /* SampleXPC.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DDDD91EC23CF091D00A880AE /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDD91EF23CF091D00A880AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DDDD91F323CF091F00A880AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDDD91F923CF091F00A880AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDDD91FB23CF091F00A880AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDDD91FC23CF091F00A880AE /* SampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleApp.entitlements; sourceTree = "<group>"; };
+		DDDD920323CF0A3200A880AE /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DDDD920523CF0B4500A880AE /* Project.base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.base.xcconfig; sourceTree = "<group>"; };
+		DDDD920623CF0B4500A880AE /* SampleXPC.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SampleXPC.xcconfig; sourceTree = "<group>"; };
+		DDDD920823CF0B4500A880AE /* Project.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.debug.xcconfig; sourceTree = "<group>"; };
+		DDDD920923CF0B4500A880AE /* SampleApp.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SampleApp.xcconfig; sourceTree = "<group>"; };
+		DDDD920B23CF0B4500A880AE /* Project.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.release.xcconfig; sourceTree = "<group>"; };
+		DDDD921623CF0DE500A880AE /* SharedKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SharedKit; sourceTree = "<group>"; };
+		DDDD921B23CF120000A880AE /* SampleXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SampleXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDDD921F23CF120100A880AE /* FinderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderInterface.swift; sourceTree = "<group>"; };
+		DDDD922123CF120100A880AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DDDD922323CF120100A880AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDDD91E923CF091D00A880AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDD921523CF0D3600A880AE /* SharedKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDD921823CF120000A880AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDD922D23CF13DB00A880AE /* SharedKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDDD91E323CF091D00A880AE = {
+			isa = PBXGroup;
+			children = (
+				DDDD921623CF0DE500A880AE /* SharedKit */,
+				DDDD920223CF096900A880AE /* Configs */,
+				DDDD91EE23CF091D00A880AE /* SampleApp */,
+				DDDD921C23CF120100A880AE /* SampleXPC */,
+				DDDD91ED23CF091D00A880AE /* Products */,
+				DDDD921323CF0D3600A880AE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DDDD91ED23CF091D00A880AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD91EC23CF091D00A880AE /* SampleApp.app */,
+				DDDD921B23CF120000A880AE /* SampleXPC.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDDD91EE23CF091D00A880AE /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD91EF23CF091D00A880AE /* AppDelegate.swift */,
+				DDDD91F323CF091F00A880AE /* Assets.xcassets */,
+				DDDD91FB23CF091F00A880AE /* Info.plist */,
+				DDDD91F823CF091F00A880AE /* Main.storyboard */,
+				DDDD920323CF0A3200A880AE /* MainView.swift */,
+				DDDD91FC23CF091F00A880AE /* SampleApp.entitlements */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		DDDD920223CF096900A880AE /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD920623CF0B4500A880AE /* SampleXPC.xcconfig */,
+				DDDD920923CF0B4500A880AE /* SampleApp.xcconfig */,
+				DDDD920523CF0B4500A880AE /* Project.base.xcconfig */,
+				DDDD920823CF0B4500A880AE /* Project.debug.xcconfig */,
+				DDDD920B23CF0B4500A880AE /* Project.release.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		DDDD921323CF0D3600A880AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDDD921C23CF120100A880AE /* SampleXPC */ = {
+			isa = PBXGroup;
+			children = (
+				DDDD921F23CF120100A880AE /* FinderInterface.swift */,
+				DDDD922123CF120100A880AE /* main.swift */,
+				DDDD922323CF120100A880AE /* Info.plist */,
+			);
+			path = SampleXPC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDDD91EB23CF091D00A880AE /* SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDD91FF23CF091F00A880AE /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildPhases = (
+				DDDD91E823CF091D00A880AE /* Sources */,
+				DDDD91E923CF091D00A880AE /* Frameworks */,
+				DDDD91EA23CF091D00A880AE /* Resources */,
+				DDDD922A23CF120100A880AE /* Embed XPC Services */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDDD922523CF120100A880AE /* PBXTargetDependency */,
+			);
+			name = SampleApp;
+			packageProductDependencies = (
+				DDDD921423CF0D3600A880AE /* SharedKit */,
+			);
+			productName = SampleApp;
+			productReference = DDDD91EC23CF091D00A880AE /* SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDDD921A23CF120000A880AE /* SampleXPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDD922723CF120100A880AE /* Build configuration list for PBXNativeTarget "SampleXPC" */;
+			buildPhases = (
+				DDDD921723CF120000A880AE /* Sources */,
+				DDDD921823CF120000A880AE /* Frameworks */,
+				DDDD921923CF120000A880AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleXPC;
+			packageProductDependencies = (
+				DDDD922C23CF13DB00A880AE /* SharedKit */,
+			);
+			productName = SampleXPC;
+			productReference = DDDD921B23CF120000A880AE /* SampleXPC.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDDD91E423CF091D00A880AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Apple Feedback";
+				TargetAttributes = {
+					DDDD91EB23CF091D00A880AE = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					DDDD921A23CF120000A880AE = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DDDD91E723CF091D00A880AE /* Build configuration list for PBXProject "SampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDDD91E323CF091D00A880AE;
+			productRefGroup = DDDD91ED23CF091D00A880AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDDD91EB23CF091D00A880AE /* SampleApp */,
+				DDDD921A23CF120000A880AE /* SampleXPC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDDD91EA23CF091D00A880AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDD91FA23CF091F00A880AE /* Main.storyboard in Resources */,
+				DDDD91F423CF091F00A880AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDD921923CF120000A880AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDDD91E823CF091D00A880AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDD91F023CF091D00A880AE /* AppDelegate.swift in Sources */,
+				DDDD920423CF0A3200A880AE /* MainView.swift in Sources */,
+				DDDD922B23CF12FF00A880AE /* FinderInterface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDDD921723CF120000A880AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDD922223CF120100A880AE /* main.swift in Sources */,
+				DDDD922023CF120100A880AE /* FinderInterface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDDD922523CF120100A880AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDDD921A23CF120000A880AE /* SampleXPC */;
+			targetProxy = DDDD922423CF120100A880AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDDD91F823CF091F00A880AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDDD91F923CF091F00A880AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDDD91FD23CF091F00A880AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDD920823CF0B4500A880AE /* Project.debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		DDDD91FE23CF091F00A880AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDD920B23CF0B4500A880AE /* Project.release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		DDDD920023CF091F00A880AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDD920923CF0B4500A880AE /* SampleApp.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		DDDD920123CF091F00A880AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDD920923CF0B4500A880AE /* SampleApp.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		DDDD922823CF120100A880AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDD920623CF0B4500A880AE /* SampleXPC.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		DDDD922923CF120100A880AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDD920623CF0B4500A880AE /* SampleXPC.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDDD91E723CF091D00A880AE /* Build configuration list for PBXProject "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDD91FD23CF091F00A880AE /* Debug */,
+				DDDD91FE23CF091F00A880AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDD91FF23CF091F00A880AE /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDD920023CF091F00A880AE /* Debug */,
+				DDDD920123CF091F00A880AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDD922723CF120100A880AE /* Build configuration list for PBXNativeTarget "SampleXPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDD922823CF120100A880AE /* Debug */,
+				DDDD922923CF120100A880AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDDD921423CF0D3600A880AE /* SharedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedKit;
+		};
+		DDDD922C23CF13DB00A880AE /* SharedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DDDD91E423CF091D00A880AE /* Project object */;
+}
