@@ -1,12 +1,18 @@
 import Foundation
 import os
 
+public enum XPCConfiguration {
+  /// Bundle identifier of a XPC service.
+  case serviceName(String)
+  /// Mach service name advertised via launchd.plist.
+  case machServiceName(String, options: NSXPCConnection.Options)
+}
+
 /// Live connection to the given XPC service.
 final public class XPC<P> {
 
-  /// Bundle identifier of a XPC service.
-  public let serviceName: String
-
+  public let configuration: XPCConfiguration
+  
   /// Callback for unexpected XPC errors.
   public let errorHandler: (_ error: Error) -> Void
 
@@ -19,11 +25,11 @@ final public class XPC<P> {
   }
 
   /// Creates a live XPC connection.
-  /// - Parameter serviceName: Bundle identifier of a XPC service.
+  /// - Parameter configuration: Configuration for XPC service.
   /// - Parameter errorHandler: Callback for unexpected XPC errors.
   /// - Parameter error: XPC error.
-  public init(serviceName: String, errorHandler: @escaping (_ error: Error) -> Void) {
-    self.serviceName = serviceName
+  public init(configuration: XPCConfiguration, errorHandler: @escaping (_ error: Error) -> Void) {
+    self.configuration = configuration
     self.errorHandler = errorHandler
   }
 
@@ -69,7 +75,7 @@ private extension XPC {
       throw CocoaError(.xpcConnectionInvalid)
     }
 
-    let connection = NSXPCConnection(serviceName: serviceName)
+    let connection = NSXPCConnection(configuration: configuration)
     connection.remoteObjectInterface = .init(with: serviceProtocol)
     connection.resume()
     connection.interruptionHandler = { [weak self] in
@@ -91,3 +97,14 @@ private extension XPC {
 
 /// Local handle for logging events.
 private let events: OSLog = .init(subsystem: "com.apple.feedback.SharedKit.Events", category: "XPC")
+
+extension NSXPCConnection {
+  convenience init(configuration: XPCConfiguration) {
+    switch configuration {
+    case let .serviceName(serviceName):
+      self.init(serviceName: serviceName)
+    case let .machServiceName(machServiceName, options: options):
+      self.init(machServiceName: machServiceName, options: options)
+    }
+  }
+}
